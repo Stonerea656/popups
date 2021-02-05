@@ -1,0 +1,89 @@
+/*--------------------------------------------------------------
+# form popup
+--------------------------------------------------------------*/
+span.gb-button-text.show-popup {
+	cursor: pointer;
+}
+.form-popup{
+    position: fixed;
+    z-index: 200;
+    top: 0px;
+    left: 0px;
+    background: rgba(177,163,132,0.71);
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    visibility: hidden;
+    opacity: 0;
+}
+.form-popup--inner{
+    max-width: 640px;
+    width: 100%;
+    background: #0D2043;
+    padding: 20px;
+    text-align: center;
+    margin: 0 10px;
+    -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+            transform: translateY(20px);
+    -webkit-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+}
+.form-popup--inner h2 {
+    color: white;
+    font-size: 32px;
+}
+.form-popup--inner p {
+    color:white;
+}
+.form-popup--inner .btn {
+    margin-top:50px;
+}
+.form-popup.is-active, .form-popup.is-active .form-popup--inner {
+    visibility: visible;
+    opacity: 1;
+}
+.form-popup.is-active .form-popup--inner {
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
+}
+.form-close {
+	width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    background: white;
+    color: black;
+}
+.form-close:after {
+    content: "";
+    background-image:url('https://dev.sunsolislegal.com.au/wp-content/uploads/2020/12/x-mark.png');
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    display: block;
+    margin-left: -9px;
+}
+@media (min-width:1020px) {
+    .form-popup--inner{ 
+        padding:40px;
+    }
+}
